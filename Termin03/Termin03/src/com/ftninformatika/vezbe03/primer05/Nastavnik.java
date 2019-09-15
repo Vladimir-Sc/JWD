@@ -74,16 +74,16 @@ public class Nastavnik {
 		this.nastavnikPredajePredmete = nastavnikPredajePredmete;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Nastavnik [id=" + id + ", ime=" + ime + ", prezime=" + prezime + ", zvanje=" + zvanje + "]";
-//	}
-	
 	@Override
 	public String toString() {
-		return "id=" + id + "\n" + "ime=" + ime + "\n" + "prezime=" + prezime + "\n" + "zvanje=" + zvanje + "\n";
-		
+		return "Nastavnik [id=" + id + ", ime=" + ime + ", prezime=" + prezime + ", zvanje=" + zvanje + "]";
 	}
+	
+//	@Override
+//	public String toString() {
+//		return "id=" + id + "\n" + "ime=" + ime + "\n" + "prezime=" + prezime + "\n" + "zvanje=" + zvanje + "\n";
+//		
+//	}
 
 }
 
