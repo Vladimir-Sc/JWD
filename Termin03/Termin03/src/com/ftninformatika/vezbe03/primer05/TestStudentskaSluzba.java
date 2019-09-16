@@ -3,7 +3,8 @@ package com.ftninformatika.vezbe03.primer05;
 import java.util.ArrayList;
 
 public class TestStudentskaSluzba {
-
+	
+	
 	/*** ISPIS***/
 	public static void ispisiStudente(ArrayList<Student> lista){
 		for (Student st : lista) {
