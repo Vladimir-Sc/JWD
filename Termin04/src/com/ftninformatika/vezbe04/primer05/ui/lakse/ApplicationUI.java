@@ -32,8 +32,8 @@ public class ApplicationUI {
 		File pohadjaFajl = new File("."+sP+"data"+sP+"pohadja.csv");
 		PohadjaUI.citajIzFajlaPohadja(pohadjaFajl);
 		
-//		File ispitniRokFajl = new File("."+sP+"data"+sP+"ispitni_rokovi.csv");
-//		IspitniRokUI.citajIzFajlaIspitneRokove(ispitniRokFajl);
+		File ispitniRokFajl = new File("."+sP+"data"+sP+"ispitni_rokovi.csv");
+		IspitniRokUI.citajIzFajlaIspitneRokove(ispitniRokFajl);
 		
 //		File ispitnePrijaveFajl = new File("."+sP+"data"+sP+"ispitne_prijave.csv");
 //		IspitnaPrijavaUI.citajIzFajlaIspitnePrijave(ispitnePrijaveFajl);
@@ -53,6 +53,9 @@ public class ApplicationUI {
 				case 2:
 					PredmetUI.meniPredmetUI();
 					break;
+				case 4: 
+					IspitniRokUI.meniIspitniRokUI();	
+					break;
 				case 5:
 					PohadjaUI.menuPohadjaUI();
 					break;
@@ -65,7 +68,7 @@ public class ApplicationUI {
 		StudentUI.pisiUFajlStudente(studentiFajl);
 		PredmetUI.pisiUFajlPredmete(predmetiFajl);
 		PohadjaUI.pisiUFajlPohadja(pohadjaFajl);
-//		IspitniRokUI.pisiUFajlIspitneRokove(ispitniRokFajl);
+		IspitniRokUI.pisiUFajlIspitneRokove(ispitniRokFajl);
 //		IspitnaPrijavaUI.pisiUFajlIspitnePrijave(ispitnePrijaveFajl);
 		System.out.print("Program izvrsen");
 	}

@@ -1,4 +1,4 @@
-package samostalni;
+package com.ftninformatika.vezbe04.primer05.model;
 
 import java.util.ArrayList;
 
@@ -31,6 +31,17 @@ public class IspitniRok {
 		
 		//TO DO
 		
+		if (tokeni.length !=4) {
+			System.out.println("greska pri ucitavanju " + tekst);
+			System.exit(0);
+		}
+		
+		
+		id = Integer.parseInt(tokeni[0]);
+		naziv = tokeni[1];
+		pocetak = tokeni[2];
+		kraj= tokeni[3];
+		
 		if (brojacID<id) {
 			brojacID=id;
 		}
@@ -41,7 +52,7 @@ public class IspitniRok {
 	//metoda koja kreira tekstualnu reprezentaciju Ispitnog roka za fajl
 	public String toFileRepresentation(){
 		//TO DO
-		return "";
+		return id + ", " + naziv +", " + pocetak + ", " + kraj;
 	}
 	
 	@Override
@@ -56,7 +67,7 @@ public class IspitniRok {
 				+ naziv + " održava se " + pocetak + " do " + kraj);
 		
 		if(ispitnePrijave != null){
-			sb.append(" i pohađa predmete\n");
+			sb.append(" i ima sledece ispitne prijave:\n");
 			for (int i = 0; i < ispitnePrijave.size(); i++) {
 				sb.append("\t"+ispitnePrijave.get(i).toString()+"\n");
 			}

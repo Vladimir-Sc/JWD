@@ -2,8 +2,6 @@ package com.ftninformatika.vezbe04.primer05.model;
 
 import java.util.ArrayList;
 
-import samostalni.IspitnaPrijava;
-
 //klasa
 public class Student {
 

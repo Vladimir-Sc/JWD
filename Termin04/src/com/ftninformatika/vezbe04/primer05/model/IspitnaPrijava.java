@@ -1,4 +1,4 @@
-package samostalni;
+package com.ftninformatika.vezbe04.primer05.model;
 
 
 import com.ftninformatika.vezbe04.primer05.model.*;

@@ -3,7 +3,7 @@ package com.ftninformatika.vezbe03.primer04;
 import java.util.ArrayList;
 
 //klasa
-class Student {
+public class Student {
 
 	//atributi
 	protected int id;
@@ -16,7 +16,9 @@ class Student {
 	
 	/** KONSTRUKTORI ****/
 	// konstruktor bez parametra
-	public Student(){ }
+	public Student() {
+		
+	}
 	
 	//konstruktor sa vise parametara
 	public Student(int id, String ime, String prezime, String grad, String indeks) {
