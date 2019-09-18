@@ -32,12 +32,21 @@ public class IspitniRokUI {
 			case 1:
 				unosNovogIspitnogRoka();
 				break;
-//			case 2:
-//				izmenaPodatakaIspitnogRoka();
-//				break;
+			case 2:
+				izmenaPodatakaIspitnogRoka();
+				break;
 			case 3:
 				ispisiSveIspitneRokove();
 				break;
+			case 4:
+				IspitniRok ir = pronadiIspitniRokId();
+				if(ir!=null){
+					System.out.println(ir.toString());
+				}	
+				break;
+			default:
+				System.out.println("Nepostojeca komanda");
+				break;		
 
 			}
 		}
@@ -46,13 +55,12 @@ public class IspitniRokUI {
 	
 	/** METODE ZA ISPIS OPCIJA ****/
 	//ispis teksta osnovnih opcija
-	
 	public static void ispisiTekstIspitniRokOpcije() {
 		System.out.println("Rad sa Ispitnim Rokovima - opcije: ");
 		System.out.println("\tOpcija broj 1 - unos podataka o novom ispitnom roku");
 		System.out.println("\tOpcija broj 2 - izmena podataka o ispitnom rokuu");
 		System.out.println("\tOpcija broj 3 - ispis podataka svih ispitnih rokova ");
-		System.out.println("\tOpcija broj 4 - spis podataka o određenom ispitnom roku");
+		System.out.println("\tOpcija broj 4 - ispis podataka o određenom ispitnom roku");
 		System.out.println("\t\t ...");
 		System.out.println("\tOpcija broj 0 - IZLAZ");
 
@@ -61,7 +69,6 @@ public class IspitniRokUI {
 	
 	/** METODE ZA ISPIS ROKOVA ****/
 	//ispisi sve rokove
-	
 	public static void ispisiSveIspitneRokove() {
 		for (int i = 0; i < sviIspitniRokovi.size(); i++) {
 			System.out.println(sviIspitniRokovi.get(i));
@@ -71,7 +78,6 @@ public class IspitniRokUI {
 	
 	/** METODE ZA PRETRAGU ROKOVA****/
 	//pronadji ispitni rok
-	
 	public static IspitniRok pronadiIspitniRokId(int id) {
 		IspitniRok retVal = null;
 
@@ -86,9 +92,9 @@ public class IspitniRokUI {
 		return retVal;
 	}
 	
-	public static IspitniRok pronadiIspitniRok() {
+	public static IspitniRok pronadiIspitniRokId() {
 		IspitniRok retVal = null;
-		System.out.print("Unesi id ispitnog roka:");
+		System.out.print("Unesi naziv ispitnog roka:");
 		int id = PomocnaKlasa.ocitajCeoBroj();
 		retVal = pronadiIspitniRokId(id);
 		if (retVal == null)
@@ -97,9 +103,25 @@ public class IspitniRokUI {
 		return retVal;
 	}
 	
+	public static int pronadjiPozicijuRoka() {
+		int retVal = -1;
+		System.out.println("Unesi naziv roka: ");
+		String irNaziv = PomocnaKlasa.ocitajTekst();
+		for (int i = 0; i < sviIspitniRokovi.size(); i++) {
+			IspitniRok ir = sviIspitniRokovi.get(i);
+			if (ir.getNaziv().equals(irNaziv)) {
+				retVal = i;
+				break;
+			}
+		}
+		if(retVal == -1)
+			System.out.println("Roka sa nazivom " +irNaziv + " ne postoji u evidenciji");
+		return retVal;
+		
+	}
+	
 	
 	/** METODE ZA UNOS i IZMENU ROKOVA****/
-	
 	//upis novog roka
 	public static void unosNovogIspitnogRoka() {
 		System.out.println("Unesi naziv ispitnog roka: ");
@@ -114,26 +136,35 @@ public class IspitniRokUI {
 	}
 
 
+	//izmena ispitnog roka
 	public static void izmenaPodatakaIspitnogRoka() {
-		IspitniRok ir = null;
-		System.out.print("Unesi ispitni rok:");
+		IspitniRok ir = pronadiIspitniRokId();
+		if (ir != null) {
+			System.out.print("Unesi ime:");
+			String irNaziv = PomocnaKlasa.ocitajTekst();
+			System.out.print("Unesi prezime:");
+			String irPocetak = PomocnaKlasa.ocitajTekst();
+			System.out.print("Unesi grad:");
+			String irkraj  = PomocnaKlasa.ocitajTekst();
+		
+			ir.setNaziv(irNaziv);
+			ir.setPocetak(irPocetak);
+			ir.setKraj(irkraj);
+			
+		}
 	}
 
-//	Student st  = pronadjiStudentaIndeks();
-//	if(st != null){
-//		System.out.print("Unesi ime:");
-//		String stIme = PomocnaKlasa.ocitajTekst();
-//		System.out.print("Unesi prezime:");
-//		String stPrezime = PomocnaKlasa.ocitajTekst();
-//		System.out.print("Unesi grad:");
-//		String stGrad  = PomocnaKlasa.ocitajTekst();
-//		
-//		st.setIme(stIme);
-//		st.setPrezime(stPrezime);
-//		st.setGrad(stGrad);
-
+	//brisanje roka
+	public static void brisanjeRoka(){
+		int pozicija = pronadjiPozicijuRoka();
+		if(pozicija!=-1){
+			sviIspitniRokovi.remove(pozicija);
+			System.out.println("Podaci obrisani iz evidencije");
+		}
+	}	
 	
 	
+	/** METODA ZA UCITAVANJE PODATAKA****/
 	public static void citajIzFajlaIspitneRokove(File dokument) throws IOException {
 
 		if (dokument.exists()) {
