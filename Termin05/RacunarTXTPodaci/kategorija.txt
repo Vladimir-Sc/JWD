@@ -1,0 +1,15 @@
+kat001|Tastatura|keyboard|null|false
+kat002|Maticna ploca|motherboard|null|false
+kat003|Procesor|processor|null|false
+kat004|Graficka kartica|graphic card|null|true
+kat005|HDD SSD i oprema|internal memories|null|false
+kat006|RAM memorija|Random Access Memory|null|false
+kat007|Serverska memorija|server memories|null|false
+kat008|Opticki uredjaj|optical devices|null|false
+kat009|Kuciste|kucista za racunare|null|false
+kat010|Napajanje|power supply for computers|null|false
+kat011|Zvucna kartica|sound card|null|false
+kat012|Hladnjak ventilator i oprema|cooling system|null|false
+kat000|test1|test1|null|false
+kat2000|test1|test1|null|false
+testiranjeKat|testiranjeKat|testiranjeKat|kat012|false

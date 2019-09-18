@@ -1,0 +1,8 @@
+proc2000|test1|200.0|0|test1|false|kat001|3.2|2
+proc000|test|2000.0|20|test|false|kat003|3.2|4
+proc004|CPU FM2 AMD Athlon|3699.0|24|CPU FM2 AMD Athlon X2 Dual-Core 340 3.20GHz/32nm BOX|true|kat003|3.2|2
+proc001|APU FM2 AMD A4-4000|4299.0|24|APU FM2 AMD A4-4000 3.0GHz/ Radeon HD 7480D|true|kat003|3.0|1
+proc002|APU FM2 AMD A4-4020|4399.0|24|APU FM2 AMD A4-4020 3.2GHz/ Radeon HD 7480D|false|kat003|3.2|1
+proc003|APU FM2 AMD A6-6400K|6499.0|24|APU FM2 AMD A6-6400K 3.9GHz/ Radeon HD 8470D|false|kat003|3.9|1
+proc005|CPU FM2 AMD Athlon|6999.0|24|CPU FM2 AMD Athlon X4 Quad-Core 740 3.20GHz BOX 32nm|false|kat003|3.2|4
+testiranjeProc|testiranjeProc|2.0|2|testiranjeProc|false|kat001|3.0|2

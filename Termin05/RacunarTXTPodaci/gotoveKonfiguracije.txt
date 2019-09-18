@@ -1,0 +1,5 @@
+konf003|Altos Cobra|20999.0|12|predobar za svoju cenu|false|komp001;komp011;komp010;
+konf001|Altos Rocket|28799.0|20|predobar za svoju cenu|false|komp001;komp003;komp005;
+konf004|Altos Hornet|32999.0|20|predobar za svoju cenu|true|komp001;mem003;
+konf002|Altos Head Hunter|79999.0|20|predobar za svoju cenu|false|komp002;komp005;komp011;
+testiranjeKonf|testiranjeKonf|2.0|20|testiranjeKonf|false|komp000;komp009;

@@ -1,0 +1,2 @@
+petar|123|Petar|Petrovic|menadzer
+marko|123|Marko|Markovic|prodavac

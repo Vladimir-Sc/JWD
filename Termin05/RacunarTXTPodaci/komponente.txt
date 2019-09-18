@@ -1,0 +1,14 @@
+komp000|promenjeno|200.0|0|promenjeno|false|kat000
+komp200|test2|200.0|0|test2|false|kat001
+komp009|Extension karta Asus Xonar|1679.0|9|Extension karta Asus Xonar|false|kat011
+komp006|ASUS DRW-24F1ST/BLK/B/AS|2399.0|11|DVD+/-RW ASUS|false|kat008
+komp010|Asus Xonar U3|3999.0|12|Zvucna karta Asus Xonar|false|kat011
+komp008|420W LC Power 2001MB|5099.0|25|Kuciste 420W LC Power 2001MB black|false|kat009
+komp001|MB NM70 MSI C847MS-E33|7199.0|25|MB NM70 MSI C847MS-E33 Celeron Dual Core 1.1GHz|true|kat002
+komp005|Blu-ray Combo LG CH12NS30.AUAR10B|8299.0|22|Blu-ray Combo LG CH12NS30AUAR10B DVD R/RW|false|kat008
+komp003|AMD Radeon 7770 Powercolor|11754.0|15|AMD Radeon 7770 Powercolor GHz Edit.1GB|false|kat004
+komp007|Thermaltake Urban S71 Black full tower|12399.0|25|Kuciste Thermaltake Urban S71 Black full tower|false|kat009
+komp004|AMD Radeon 7750 Powercolor|19999.0|14|AMD Radeon 7750 Powercolor 1GB DDR5|true|kat002
+komp011|1000W Cooler Master Silent PRO M2|22999.0|25|Napajanje 1000W Cooler Master Silent PRO M2|false|kat010
+komp002|test|200000.0|20|test|false|kat012
+testiranjeKomp|testiranjeKomp|2.0|0|testiranjeKomp|false|kat001

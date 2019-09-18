@@ -1,0 +1,10 @@
+mem000|test1|20.0|20|test1|false|kat006|250TB
+mem200|test1|2000.0|20|test1|false|kat005|2000GB
+mem002|5400 500GB Hitachi Travelstar 2.5|4799.0|10|SATA2 HDD Hitachi Travelstar|false|kat005|500GB
+mem003|5400 Seagate SpinPoint 2.5|5999.0|25|HDD SATA2 5400 Seagate SpinPoint 2.5 500GB ST500LM012|false|kat005|500GB
+mem004|128GB Sandisk 475/375MBs|9190.0|30|SSD SATA3 128GB|true|kat005|128GB
+mem001|5940 3TB Toshiba|16990.0|20|HDD SATA3 3.5 5940 3TB Toshiba 32MB 2 godine|false|kat005|3TB
+mem005|KVR13S9K2/16|20707.0|44|Memorija 16GB 1333MHz DDR3 Non-ECC|false|kat006|16GB
+mem007|KHX16LS9P1K2/16|22445.0|20|Memorija 16GB 1600MHz DDR3 CL9|false|kat006|16GB
+mem006|KHX16LC10K2|22445.0|20|Memorija 16GB 1600MHz DDR3 CL10 DIMM|false|kat006|16GB
+testiranjeMem|testiranjeMem|2.0|2|testiranjeMem|false|kat001|2TB
