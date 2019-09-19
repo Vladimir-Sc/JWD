@@ -11,6 +11,12 @@ public class PixelEkrana extends Tacka2D{
 	}
 	*/
 	
+	// Build path specifies execution environment JavaSE-1.7. There are no JREs installed in the workspace that are strictly compatible with this environment. 
+	
+	//tip reference Tacka2D 
+	//tip instance PixelEkrana
+	
+	
 	public PixelEkrana(double x, double y, String color) {
 		super(x, y);
 		this.color = color;
