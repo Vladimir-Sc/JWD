@@ -21,6 +21,10 @@ public class StudentImeKomparator implements Comparator<Student>{
 		if(ob1!= null && ob2!=null){
 			retVal = ob1.getIme().compareTo(ob2.getIme());
 		}
+		System.out.println(ob1.getIme());
+		System.out.println(ob2.getIme());
+		System.out.println(retVal);
+		
 		return retVal * direction;
 	}
 }

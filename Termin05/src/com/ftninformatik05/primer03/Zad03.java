@@ -54,14 +54,14 @@ public class Zad03 {
 		//vec metoda klase Rectangle
 		
 		
-		/*
+		
 		//ODKOMENTARISI I ISPROBAJ
 		fig = sveFigure.get(0); 
 		Pravougaonik pra = (Pravougaonik)fig; //OVO NE SME DA SE RADI, 
 		//AKO SE PRETHODNO NE PROVERI KOGE JE TIPA OBJEKAT
 //		System.out.print("Tacka A kod pravougaonika "); 
 //		pra.getA().ispisNaEkran());
-		 */
+		 
 		
 		//JEDINO ISPRAVNO
 //		if(sveFigure.get(1) instanceof Pravougaonik){
