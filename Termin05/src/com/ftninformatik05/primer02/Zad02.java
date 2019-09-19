@@ -23,12 +23,12 @@ public class Zad02 {
 		System.out.println("-----------");
 		 */
 		
-		/*
+		
 		Pravougaonik pra = new Pravougaonik(new Tacka2D(0, 0),new Tacka2D(5, 5));
 		System.out.println("Povrsina pravougaonika je " + pra.izracunajPovrsinu());
 		System.out.println("Obim pravougaonika je " + pra.izracunajObim());
 		System.out.println(pra.toString());
-		*/
+		
 		
 		System.out.print("Program izvrsen");
 	}

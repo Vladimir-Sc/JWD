@@ -41,7 +41,7 @@ public class Zad03 {
 		}
 		
 		
-		/*
+		
 		//ODKOMENTARISI I ISPROBAJ
 		sveFigure.add(new Pravougaonik(new Tacka2D(0, 0),new Tacka2D(5, 5)));
 		fig = sveFigure.get(1);
@@ -52,7 +52,7 @@ public class Zad03 {
 		System.out.println(fig.toString());
 		//ne pozivaju se izracunajPovrsinu, izracunajObim, toString metode klase Figura 
 		//vec metoda klase Rectangle
-		*/
+		
 		
 		/*
 		//ODKOMENTARISI I ISPROBAJ
