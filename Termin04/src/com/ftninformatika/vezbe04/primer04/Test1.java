@@ -56,7 +56,7 @@ public class Test1 {
 		}
 	}
 	
-	static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 
 		String sP = System.getProperty("file.separator");
 		Test1 testKlasa = new Test1();

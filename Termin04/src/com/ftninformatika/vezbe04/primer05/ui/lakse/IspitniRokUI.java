@@ -165,38 +165,72 @@ public class IspitniRokUI {
 	
 	
 	/** METODA ZA UCITAVANJE PODATAKA****/
-	public static void citajIzFajlaIspitneRokove(File dokument) throws IOException {
+	static void citajIzFajlaIspitneRokove(File dokument) throws IOException {
+		if(dokument.exists()){
 
-		if (dokument.exists()) {
-			System.out.println("Dokument postoji");
 			BufferedReader in = new BufferedReader(new FileReader(dokument));
-
-			in.mark(1); // zapamti trenutnu poziciju u fajlu da mozes kasnije da se vratis na nju
-			if (in.read() != '\ufeff') {
+			
+			//workaround for UTF-8 files and BOM marker
+			//BOM (byte order mark) marker may appear on the beginning of the file
+			//BOM can signal which of several Unicode encodings (8-bit, 16-bit, 32-bit) that text is encoded as
+			
+			in.mark(1); //zapamti trenutnu poziciju u fajlu da mozes kasnije da se vratis na nju
+			if(in.read()!='\ufeff'){
 				in.reset();
 			}
-
+			
 			String s2;
-			while ((s2 = in.readLine()) != null) {
-
+			while((s2 = in.readLine()) != null) {
 				sviIspitniRokovi.add(new IspitniRok(s2));
 			}
-			
 			in.close();
-
 		} else {
 			System.out.println("Ne postoji fajl!");
 		}
-
 	}
 	
 	static void pisiUFajlIspitneRokove(File dokument) throws IOException {
 		PrintWriter out2 = new PrintWriter(new FileWriter(dokument));
-		for (IspitniRok rok : sviIspitniRokovi) {
-			out2.println(rok.toFileRepresentation());
+		for (IspitniRok ir : sviIspitniRokovi) {
+			out2.println(ir.toFileRepresentation());
 		}
 		
 		out2.flush();
 		out2.close();
 	}
+//	/** METODA ZA UCITAVANJE PODATAKA****/
+//	public static void citajIzFajlaIspitneRokove(File dokument) throws IOException {
+//
+//		if (dokument.exists()) {
+//			System.out.println("Dokument postoji");
+//			BufferedReader in = new BufferedReader(new FileReader(dokument));
+//
+//			in.mark(1); // zapamti trenutnu poziciju u fajlu da mozes kasnije da se vratis na nju
+//			if (in.read() != '\ufeff') {
+//				in.reset();
+//			}
+//
+//			String s2;
+//			while ((s2 = in.readLine()) != null) {
+//
+//				sviIspitniRokovi.add(new IspitniRok(s2));
+//			}
+//			
+//			in.close();
+//
+//		} else {
+//			System.out.println("Ne postoji fajl!");
+//		}
+//
+//	}
+//	
+//	static void pisiUFajlIspitneRokove(File dokument) throws IOException {
+//		PrintWriter out2 = new PrintWriter(new FileWriter(dokument));
+//		for (IspitniRok rok : sviIspitniRokovi) {
+//			out2.println(rok.toFileRepresentation());
+//		}
+//		
+//		out2.flush();
+//		out2.close();
+//	}
 }
