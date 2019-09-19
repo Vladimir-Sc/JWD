@@ -12,7 +12,7 @@ public class Zad02 {
 		System.out.println("Obim kruga je " + kr.izracunajObim());
 		System.out.println(kr.toString());
 		
-		Figura fig;
+		Figura fig; //neka greska ovde 
 		
 		//apstraktna klasa ne moze se instancirati
 		/*
