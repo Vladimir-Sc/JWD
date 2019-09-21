@@ -49,6 +49,15 @@ public class DrzavaUI {
 	}
 
 	public static void statistika() {
+		Map<String, StatistikaDzava>
+		for (Drzava d : drzava.values()) {
+				
+				for(SvetskoPrvenstvo sp: SvetskoPrvenstvoUI.getPrvenstva()) {
+					if(sp.getDomacin().getNaziv.equals(d.getNaziv())) {
+						
+					}
+				}
+			}
 		
 	}
 	
