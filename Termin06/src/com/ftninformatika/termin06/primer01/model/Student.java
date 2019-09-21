@@ -27,15 +27,15 @@ public class Student {
 //		return result;
 //	}
 //	
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj) return true;
-//		if (obj == null) return false;
-//		if (!(obj instanceof Student)) return false;
-//
-//		Student that = (Student) obj;
-//		return indeks.equals(that.indeks) && ime.equals(that.ime) && prezime.equals(that.prezime); 
-//	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (!(obj instanceof Student)) return false;
+
+		Student that = (Student) obj;
+		return indeks.equals(that.indeks) && ime.equals(that.ime) && prezime.equals(that.prezime); 
+	}
 
 	public String getIndeks() {
 		return indeks;

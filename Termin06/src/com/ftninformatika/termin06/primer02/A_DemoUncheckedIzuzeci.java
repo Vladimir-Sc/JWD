@@ -1,5 +1,6 @@
 package com.ftninformatika.termin06.primer02;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class A_DemoUncheckedIzuzeci {
@@ -15,7 +16,7 @@ public class A_DemoUncheckedIzuzeci {
 			System.out.println("-----------");
 			System.out.print("Unesite izbor: ");
 
-//			try {
+			try {
 				int izbor = in.nextInt(); // ako korisnik unese tekst, nastaje unchecked izuzetak: InputMismatchException, i bez try-catch bloka program se prekida!
 				in.nextLine();
 
@@ -26,13 +27,13 @@ public class A_DemoUncheckedIzuzeci {
 					case 3: System.out.println("Odabrali ste opciju 3"); break;
 					default: System.out.println("Opcija nije ponuđena!");
 				}
-//			} catch (InputMismatchException ex) { // ako korisnik unese tekst, izuzetak biva uhvaćen i obrađen u ovom bloku koda, ali se program nastavlja!
-//				System.out.println("Neispravan unos!");
-//				//ex.printStackTrace();
-//			}
-//			finally {
-//				in.nextLine(); // neke naredbe je potrebno izvršiti u oba slučaja, pa se one smeštaju u finally klauzulu da se ne bi duplirale i u try i u catch klauzulama
-//			}
+			} catch (InputMismatchException ex) { // ako korisnik unese tekst, izuzetak biva uhvaćen i obrađen u ovom bloku koda, ali se program nastavlja!
+				System.out.println("Neispravan unos!");
+				//ex.printStackTrace();
+			}
+			finally {
+				in.nextLine(); // neke naredbe je potrebno izvršiti u oba slučaja, pa se one smeštaju u finally klauzulu da se ne bi duplirale i u try i u catch klauzulama
+			}
 		}
 
 	}

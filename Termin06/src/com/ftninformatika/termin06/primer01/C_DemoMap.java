@@ -22,18 +22,18 @@ public class C_DemoMap {
 			System.out.println(itStudent);
 		}
 
-//		// 2. način
-//		for (Entry<String, Student> par: studenti.entrySet()) { // za slučajeve kada ključ nije sadržan u entitetu, a potrebno je nešto uraditi i sa ključem i sa entitetom
-//			String indeks = par.getKey();
-//			Student itStudent = par.getValue();
-//			System.out.println("indeks: " + indeks + ", " + itStudent);
-//		}
+		// 2. način i kljuc i vrednost
+		for (Entry<String, Student> par: studenti.entrySet()) { // za slučajeve kada ključ nije sadržan u entitetu, a potrebno je nešto uraditi i sa ključem i sa entitetom
+			String indeks = par.getKey();
+			Student itStudent = par.getValue();
+			System.out.println("indeks: " + indeks + ", " + itStudent);
+		}
 		
-//		// 3. način
-//		for (String indeks: studenti.keySet()) { // za slučajeve kada ključ nije sadržan u entitetu, a potrebno je nešto uraditi sa entitetom tek ako ključ zadovoljava neki uslov
-//			Student itStudent = studenti.get(indeks);
-//			System.out.println("indeks: " + indeks + ", " + itStudent);
-//		}
+		// 3. način kroz kljuceve
+		for (String indeks: studenti.keySet()) { // za slučajeve kada ključ nije sadržan u entitetu, a potrebno je nešto uraditi sa entitetom tek ako ključ zadovoljava neki uslov
+			Student itStudent = studenti.get(indeks);
+			System.out.println("indeks: " + indeks + ", " + itStudent);
+		}
 	}
 
 	public static void dodaj(Map<String, Student> studenti) {
