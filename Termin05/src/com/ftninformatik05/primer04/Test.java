@@ -123,8 +123,11 @@ public class Test {
 		
 		ispisiSveStudente();
 		System.out.println("\nSortiraj i ispisi studente po imenu ASC\n");
-		Collections.sort(sviStudenti, new StudentImeKomparator(1));
+		Collections.sort(sviStudenti, new StudentImeKomparator(-1));
 		ispisiSveStudente();
+//		System.out.println("blablabla");
+//		Collections.sort(sviStudenti, new StudentBrPredmeta());
+//		ispisiSveStudente();
 		
 		//kreirajte klasu StudentBrojPredmetaKomarator
 	}
