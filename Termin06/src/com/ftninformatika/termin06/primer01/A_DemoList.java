@@ -97,8 +97,10 @@ public class A_DemoList {
 			Student itStudent = studenti.get(it);
 			if (itStudent.getIndeks().equals(indeks)) {
 				uklonjeniStudent = studenti.remove(it);
-				break; // obavezno! Ako se iteracija nastavi nakon modifikacije, proizvešće izuzetak
+		//		break; // obavezno! Ako se iteracija nastavi nakon modifikacije, proizvešće izuzetak
 			}
+			else it++;
+			
 		}
 
 //		// 2. način
