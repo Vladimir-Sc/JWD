@@ -1,0 +1,5 @@
+select ptt, naziv
+from studentskasluzba.grad
+where ptt=21000 or naziv like '%o'%
+group by ptt
+order by naziv desc

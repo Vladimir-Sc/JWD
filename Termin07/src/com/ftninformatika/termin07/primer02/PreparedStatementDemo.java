@@ -12,7 +12,7 @@ public class PreparedStatementDemo {
 		Statement stmt = null;
 		try {
 			// SQL upit
-			String sql = "INSERT INTO grad (ptt, naziv) values (26300, 'Vrsac')";
+			String sql = "INSERT INTO grad (ptt, naziv) values (26300, 'Vrsac')"; // ' tekst u sql-u
 
 			// kreiranje SQL naredbe
 			stmt = ConnectionManager.getConnection().createStatement();
@@ -39,11 +39,11 @@ public class PreparedStatementDemo {
 		Statement stmt = null;
 		try {
 			// SQL upit
-			String sql = "INSERT INTO grad (ptt, naziv) VALUES (" + ptt + ", '" + naziv + "')";
+			String sql = "INSERT INTO grad (ptt, naziv) VALUES (" + ptt + ", '" + naziv + "')"; // ' za tekst u sql
 			System.out.println(sql);
 
 			// kreiranje SQL naredbe
-			stmt = ConnectionManager.getConnection().createStatement();
+			stmt = ConnectionManager.getConnection().createStatement(); // moze vise naredbi da se salje
 			// izvrsavanje SQL naredbe bez prihvatanja rezultata (INSERT, UPDATE, DELETE)
 			stmt.executeUpdate(sql);
 		} finally {
@@ -121,9 +121,9 @@ public class PreparedStatementDemo {
 		}
 
 		try {
-			test1(); // pokusati izvrsavanje 2x
-//			test2();
-//			test3();
+		//	test1(); // pokusati izvrsavanje 2x
+		//	test2();
+			test3();
 
 			prikaz();
 		} catch (Exception ex) {
