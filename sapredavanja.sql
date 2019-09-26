@@ -22,3 +22,36 @@ DELETE FROM `studentskasluzba`.`grad`
 WHERE <{where_expression}>;
 
 biblioteke za rad sa mysql bazom , klase koje predstavljaju drajver
+
+
+#Termin08
+
+SELECT id, naziv FROM graddrzava.grad where drzava_id =1;
+
+UPDATE `graddrzava`.`grad`
+SET `drzava_id` = 3
+WHERE `id` = 5;
+
+#inner join 
+
+use studentskasluzba;
+select * from studenti inner join pohadja on studenti.student_id = pohadja.student_id
+
+
+#left join
+
+use studentskasluzba;
+select * from studenti left join pohadja on studenti.student_id = pohadja.student_id
+
+use studentskasluzba;
+select * from studenti left join pohadja on studenti.student_id = pohadja.student_id 
+left join predmeti on pohadja.predmet_id = predmeti.predmet_id
+
+use studentskasluzba;
+select indeks, ime, prezime, naziv from studenti left join pohadja on studenti.student_id = pohadja.student_id 
+left join predmeti on pohadja.predmet_id = predmeti.predmet_id
+
+#agregacija
+use graddrzava;
+select d.naziv as 'drzava naziv', sum(populacija) as populacija
+from drzava d inner join grad g on d.id = g.drzava_id group by d.id

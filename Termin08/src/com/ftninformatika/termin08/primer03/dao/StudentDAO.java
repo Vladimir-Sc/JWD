@@ -134,7 +134,7 @@ public class StudentDAO {
 			stmt.setString(index++, student.getPrezime());
 			stmt.setString(index++, student.getGrad());
 
-			return stmt.executeUpdate() == 1;
+			return stmt.executeUpdate() == 1; //vraca koliko je redova izmenjeno
 		} finally {
 			try {stmt.close();} catch (Exception ex) {ex.printStackTrace();}
 		}

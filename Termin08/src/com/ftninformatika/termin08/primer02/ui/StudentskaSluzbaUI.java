@@ -42,8 +42,8 @@ public class StudentskaSluzbaUI {
 			odluka = PomocnaKlasa.ocitajTekst();
 			switch (odluka) {				
 				case "1":
-					prikaziSveStudenteSaPredmetimaBezJoin();
-//					prikaziSveStudenteSaPredmetimaSaJoin();
+//					prikaziSveStudenteSaPredmetimaBezJoin();
+					prikaziSveStudenteSaPredmetimaSaJoin();
 					break;
 				case "2":
 					unosStudenta();

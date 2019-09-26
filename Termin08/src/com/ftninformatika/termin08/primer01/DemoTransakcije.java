@@ -173,8 +173,8 @@ public class DemoTransakcije {
 
 		prikaz();
 
-		test1();
-//		test2();
+//		test1();
+		test2();
 
 		prikaz();
 
