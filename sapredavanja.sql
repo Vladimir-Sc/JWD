@@ -55,3 +55,11 @@ left join predmeti on pohadja.predmet_id = predmeti.predmet_id
 use graddrzava;
 select d.naziv as 'drzava naziv', sum(populacija) as populacija
 from drzava d inner join grad g on d.id = g.drzava_id group by d.id
+
+
+#sa predavanj join vise tabela
+
+select * from nastavnici left join predaje on nastavnici.nastavnik_id = predaje.nastavnici_id
+inner join predmeti on predaje.predmeti_id = predmet_id
+
+select * from predmeti left join ispitne_prijave ip on p.predmet_id left join studenti s on ip.student_id = student_id left join ispitni_rokovi ir on ir.rok_id = ip.rok_id
