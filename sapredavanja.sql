@@ -56,6 +56,12 @@ use graddrzava;
 select d.naziv as 'drzava naziv', sum(populacija) as populacija
 from drzava d inner join grad g on d.id = g.drzava_id group by d.id
 
+#right join
+
+use studentskasluzba;
+select * from pohadja right join predmeti on pohadja.predmet_id = predmeti.predmet_id
+
+
 
 #sa predavanj join vise tabela
 
@@ -63,3 +69,53 @@ select * from nastavnici left join predaje on nastavnici.nastavnik_id = predaje.
 inner join predmeti on predaje.predmeti_id = predmet_id
 
 select * from predmeti left join ispitne_prijave ip on p.predmet_id left join studenti s on ip.student_id = student_id left join ispitni_rokovi ir on ir.rok_id = ip.rok_id
+
+
+#Termin09
+
+select * from valute v 
+left join vrednostiValuta vv 
+on v.id = vv.valuta
+left join kursneListe k on k.id = vv.kursnaLista
+
+
+
+
+select * from valute v 
+left join vrednostiValuta vv 
+on v.id = vv.valuta
+left join kursneListe k on k.id = vv.kursnaLista
+
+
+use menjacnica
+
+select *
+from valute v left join vrednostiValuta vv on 
+
+select * from valute v 
+right join vrednostiValuta vv 
+on v.id = vv.valuta
+right join kursneListe k on k.id = vv.kursnaLista
+
+
+select k.id, k.datum, vv.valuta, vv.kupovniKurs, vv.prodajniKurs, v.id, v.oznaka, v.naziv 
+from kursneListe k 
+left join vrednostiValuta vv 
+on k.id = vv.kursnaLista
+left join valute v on v.id = vv.valuta where k.datum = '2013-12-23'
+
+SELECT * FROM menjacnica.kursneListe;
+
+use menjacnica;
+select id, oznaka, naziv from valute where oznaka = 'USD'
+
+use menjacnica;
+
+INSERT INTO vrednostiValuta (valuta, kursnaLista, kupovniKurs, prodajniKurs) VALUES (4, 1, 20.2, 30.4);
+
+use menjacnica;
+select MAX(id) as id from kursneListe 
+
+SELECT * FROM menjacnica.vrednostiValuta;
+
+SELECT * FROM menjacnica.kursneListe;

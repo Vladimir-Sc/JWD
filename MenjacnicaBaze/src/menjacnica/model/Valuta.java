@@ -1,10 +1,15 @@
 package menjacnica.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Valuta {
 
 	private int id;
 	private String oznaka;
 	private String naziv;
+	
+	private List<VrednostValute> vrednostValute = new ArrayList<VrednostValute>();
 	
 	public Valuta(int id, String oznaka, String naziv) {
 		this.id = id;
@@ -42,5 +47,5 @@ public class Valuta {
 	public String getNaziv() {
 		return naziv;
 	}
-
+	
 }
