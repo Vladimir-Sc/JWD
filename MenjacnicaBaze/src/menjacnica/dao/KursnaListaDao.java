@@ -69,6 +69,10 @@ public class KursnaListaDao {
 		return kl;
 	}
 
+	
+	
+	//KursnaLista getAll() - treba uraditi metodu
+	
 	public static int slobodanKluc() throws Exception {
 
 		Statement stm = null;
