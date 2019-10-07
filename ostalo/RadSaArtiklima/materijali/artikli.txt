@@ -1,0 +1,5 @@
+s01,Coko Plazma,Bambi,85.3,akcija,1999
+s02,Smoki,Stark,55.0,nije na akciji,1999
+s03,Cipsi,Marbo,115.2,nije na akciji,1999
+s04,Krem Bananica,Stark,11.0,akcija,1999
+s05,Eurokrem,SL,250.0,nije na akciji,2000
