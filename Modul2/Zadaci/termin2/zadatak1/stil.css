@@ -1,0 +1,38 @@
+h1{
+
+    color: blue;
+    font-size: 14px;
+}
+
+th {
+
+    color: blue;
+    font-size: 14px;
+
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+
+
+}
+
+table {
+
+    background-color: grey;
+    font-size: 12px;
+}
+
+
+.row:nth-child(even) {
+    background: #dde;
+    }
+
+
+table, th, td {
+    border: 1px solid black;
+     
+    }
+

@@ -1,0 +1,17 @@
+body {
+
+    background-color: lightskyblue; 
+    color: black; 
+    text-align: center;
+}
+
+.slika {
+    float: right;
+    border:1px solid red;
+    padding: 2px 3px;
+    margin:  5px 10px;
+}
+
+.ime {
+    font-size: larger;
+}

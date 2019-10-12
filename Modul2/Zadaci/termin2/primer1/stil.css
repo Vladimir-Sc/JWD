@@ -1,0 +1,7 @@
+p[lang="sr"] {
+    color: red !important
+}
+
+p[lang="en"] {
+    color: blue
+}
