@@ -37,6 +37,7 @@ public class WebShopServlet extends HttpServlet {
 		ServletContext ctx = getServletContext();
 		products = new Products(ctx.getRealPath(""));
 		ctx.setAttribute("products", products);
+		System.out.println(ctx.getRealPath(""));
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

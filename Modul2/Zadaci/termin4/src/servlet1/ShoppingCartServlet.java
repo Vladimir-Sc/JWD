@@ -2,6 +2,7 @@ package servlet1;
 
 import javax.servlet.http.*;
 import java.io.*;
+import java.util.ArrayList;
 
 import servlet1.webshop.*;
 
@@ -69,21 +70,35 @@ public class ShoppingCartServlet extends HttpServlet {
 				// probamo da ga dodamo
 				user.getSc().addItem(products.getProduct(request.getParameter("itemId")), //user vec ima sc pa uzimamo iz usera
 						Integer.parseInt(request.getParameter("itemCount")));
+				
+				ArrayList<ShoppingCartItem> korpa = user.getSc().getItems();
+				//int h = korpa.size();
+				session.setAttribute("korpa", korpa);
+				//ArrayList<ShoppingCartItem> korpa2 = (ArrayList<ShoppingCartItem>) session.getAttribute("korpa");
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
 		}
 		
 		pout.println("Proizvodi u korpi:");
-		pout.println("<table><tr bgcolor=\"lightgrey\"><th>Naziv</th><th>Jedinicna cena</th><th>Komada</th><th>Ukupna cena</th></tr>");
+		pout.println("<table><tr bgcolor=\"lightgrey\"><th>Naziv</th><th>Jedinicna cena</th><th>Komada</th><th>Ukupna cena</th>"
+				+ "<th>Ukloni stavku</th></tr>");
 		double total = 0;
-		for ( ShoppingCartItem i : user.getSc().getItems() ) {
+		//for ( ShoppingCartItem i : user.getSc().getItems() ) {
+		ArrayList<ShoppingCartItem> korpa = (ArrayList<ShoppingCartItem>) session.getAttribute("korpa");
+		for (int i=0; i < korpa.size(); i++) {	
 			pout.println("<tr>");
-			pout.println("<td>" + i.getProduct().getName() + "</td>");
-			pout.println("<td>" + i.getProduct().getPrice() + "</td>");
-			pout.println("<td>" + i.getCount() + "</td>");
-			double price = i.getProduct().getPrice() * i.getCount();
+			pout.println("<form method=\"get\" action=\"UkloniServlet\">");
+			pout.println("<td>" + korpa.get(i).getProduct().getName() + "</td>");
+			pout.println("<td>" + korpa.get(i).getProduct().getPrice() + "</td>");
+			pout.println("<td>" + korpa.get(i).getCount() + "</td>");
+			double price = korpa.get(i).getProduct().getPrice() * korpa.get(i).getCount();
 			pout.println("<td>" + price + "</td>");
+			pout.println("<td align=\"center\">");
+			pout.println("<input type=\"hidden\" name=\"scItem\" value=\"" + i + "\">");
+			pout.println("<input type=\"submit\" value=\"X\">");
+			pout.println("</form>");
+			pout.println("</td>");
 			pout.println("</tr>");
 			total += price;
 		}
