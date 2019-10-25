@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/Predmet.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/Student.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/list/ApplicationUI_Ver_ArrayList.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/list/PohadjaUI_Ver_ArrayList.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/list/PredmetUI_Ver_ArrayList.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/list/StudentUI_Ver_ArrayList.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/map/ApplicationUI_Ver_HashMap.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/map/PohadjaUI_Ver_HashMap.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/map/PredmetUI_Ver_HashMap.java=UTF-8
+encoding//src/com/ftninformatika/termin06/primerDodatnoStudentskaSluzba/model/ui/map/StudentUI_Ver_HashMap.java=UTF-8
