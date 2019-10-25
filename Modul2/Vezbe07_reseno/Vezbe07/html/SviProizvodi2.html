@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Proizvodi</title>
+	<style type="text/css">
+		input[type="text"] {
+			width: 68px
+		}
+		input[type="submit"] {
+			width: 75px
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="DodajUKorpuServlet2">
+		<table border="1">
+			<caption>Proizvodi</caption>
+			<tr>
+				<th>Naziv</th>
+				<th>Cena</th>
+				<th>Kategorija</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td><a href="PrikaziProizvodServlet?id=">naziv proizvoda</a></td>
+				<td>00.00</td>
+				<td><a href="PrikaziKategorijuServlet?id=">kategorija proizvoda</a></td>
+				<td><input type="text" name="id_proizvoda" value="1"/></td>
+			</tr>
+			<tr><td colspan="3"></td><td><input type="submit" value="U korpu"/></td></tr>
+		</table>
+	</form>
+	<br/>
+	<a href="PocetnaServlet">Početna strana</a><br/>
+</body>
+</html>

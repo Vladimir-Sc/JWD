@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Korpa</title>
+	<style type="text/css">
+		input[type="submit"] {
+			width: 75px
+		}
+	</style>
+</head>
+<body>
+	<table border="1">
+		<caption>Korpa</caption>
+		<tr>
+			<th>Naziv</th>
+			<th>Cena</th>
+			<th>Kategorija</th>
+			<th>Komada</th>
+			<th>Ukupna cena</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td><a href="PrikaziProizvodServlet?id=">naziv proizvoda</a></td>
+			<td>00.00</td>
+			<td><a href="PrikaziKategorijuServlet?id=">kategorija proizvoda</a></td>
+			<td>1</td>
+			<td>00.00</td>
+			<td>
+				<form method="post" action="UkloniIzKorpeServlet">
+					<input type="hidden" name="redniBrojStavke" value="1"/>
+					<input type="submit" value="Ukloni"/>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"></td>
+			<td>00.00</td>
+			<td>
+				<form method="post" action="IsprazniKorpuServlet">
+					<input type="submit" value="Isprazni"/>
+				</form>
+			</td>
+		</tr>
+	</table>
+	<br/>
+	<a href="SviProizvodiServlet">Proizvodi</a><br/>
+</body>
+</html>
