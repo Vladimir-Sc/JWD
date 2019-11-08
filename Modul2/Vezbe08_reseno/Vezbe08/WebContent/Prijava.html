@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Prijava</title>
+	<style type="text/css">
+		input[type="text"][type="password"] {
+			width: 150px
+		}
+		input[type="submit"] {
+			width: 75px
+		}
+		td.upozorenje {
+			color: red
+		}
+	</style>
+	<script type="text/javascript" src="js/Prijava.js"></script>
+</head>
+<body>
+	<form method="post" action="PrijavaServlet" name="prijava">
+		<table>
+			<caption>Prijava</caption>
+			<tr><td>Korisničko ime:</td><td><input type="text" name="korisnickoIme" onfocus="ulazakUPolje(this)" onfocusout="izlazakIzPolja(this)"/></td><td class="upozorenje">*</td></tr>
+			<tr><td>Lozinka:</td><td><input type="password" name="lozinka" onfocus="ulazakUPolje(this)" onfocusout="izlazakIzPolja(this)"/></td><td class="upozorenje">*</td></tr>
+			<tr><td></td><td><input type="submit" value="Prijava" onclick="return validacija()"/></td></tr>
+		</table>
+	</form>
+	<a href="PocetnaServlet">Početna strana</a>
+</body>
+</html>

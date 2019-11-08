@@ -29,7 +29,7 @@ public class IzmeniKategorijuServlet extends HttpServlet {
 			// provere
 			if (naziv.equals("")) {
 				// neuspešna izmena
-				response.sendRedirect("PrikaziKategoriju?id=" + id);
+				response.sendRedirect("PrikaziKategorijuServlet?id=" + id);
 				return;
 			}
 			// izmena atributa kategorije

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dodavanje kategorije</title>
+	<style type="text/css">
+		input[type="text"] {
+			width: 150px
+		}
+		input[type="submit"] {
+			width: 75px
+		}
+		p.upozorenje {
+			color: red
+		}
+		input.nevalidan {
+			background-color: lightcoral
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/DodajKategoriju.js"></script>
+</head>
+<body>
+	<form name="dodavanje" method="post" action="DodajKategorijuServlet">
+		<table>
+			<caption>Dodavanje kategorije</caption>
+			<tr><td>Naziv:</td><td><input type="text" name="naziv"/></td></tr>
+			<tr><td></td><td><input type="submit" value="Dodaj"/></td></tr>
+		</table>
+	</form>
+	<p class="upozorenje"></p>
+	<a href="SveKategorijeServlet">Kategorije</a>
+</body>
+</html>

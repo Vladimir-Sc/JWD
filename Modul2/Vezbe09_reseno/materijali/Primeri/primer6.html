@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery-3.4.1.js">
+</script>
+<script>
+$(document).ready(function(){
+    $("button#b_1").click(function(){
+        $("p").hide(5000);
+        alert("hello");
+    }); 
+});
+</script>
+</head>
+
+<body>
+<h1>Alert bez callback funkcije</h1>
+<p>Prvi paragraf.</p>
+<button id="b_1">poruka</button>
+</body>
+</html>

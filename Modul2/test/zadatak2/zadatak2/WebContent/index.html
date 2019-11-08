@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- H5FormValidation.html -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Učesnici</title>
+</head>
+
+<body>
+    <h2>Froma za upis učesnika</h2>
+
+    <form id="formTest" method="post" action="DodavanjeUcesnikaServlet">
+        <table>
+            <tr>
+                <td><label for="imeprezime">Ime i prezime:</label></td>
+                <td><input type="text" id="imeprezime" name="imeprezime"></td>
+            </tr>
+
+            <tr>
+                <td><label for="kmpredjeni">Broj predjenih km:</label></td>
+                <td><input type="text" id="kmpredjeni" name="kmpredjeni" size="4"></td>
+            </tr>
+
+            <tr>
+                <td><label for="vrememin">Vreme u minutima:</label></td>
+                <td><input type="text" id="vrememin" name="vrememin" size="4"></td>
+            </tr>
+
+            <tr>
+                <td>Zavrsio trku:</td>
+                <td><label><input type="checkbox" name="zavtrka" value="zavrseno"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tip ucesnika:</td>
+                <td><label><input type="radio" name="tipUcesnika" value="rekreativac">Rekreativac</label>
+                    <label><input type="radio" name="tipUcesnika" value="profesionalac">Profesionalac</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Napomena:</td>
+                <td><textarea name="napomena" rows="4" cols="50"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>Tip ucesca:</td>
+                <td><select id="selTip" name="tipUcesca">
+                        <option value="trka zadovoljstva" selected>trka zadovoljstva 5km</option>
+                        <option value="polumaraton">polumaraton</option>
+                        <option value="maraton">maraton</option>
+                        <option value="ultramaraton">ultramaraton</option>
+                    </select></td>
+            </tr>
+
+            <!--
+            <tr>
+                <td><label for="txtPhone">Phone<span class="required">*</span></label></td>
+                <td><input type="tel" id="txtPhone" name="phone" required></td>
+            </tr>
+            <tr>
+                <td><label for="txtEmail">Email<span class="required">*</span></label></td>
+                <td><input type="email" id="txtEmail" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="txtPassword">Password<span class="required">*</span></label></td>
+                <td><input type="password" id="txtPassword" name="password" required pattern="^\w{6,8}$"
+                        placeholder="6-8 characters"></td>
+            </tr>
+            <tr>
+                <td><label for="txtPWVerified">Verify Password<span class="required">*</span></label></td>
+                <td><input type="password" id="txtPWVerified" name="pwVerified" required></td>
+            </tr>
+            <tr>
+                <td><label for="dateBirthday">Birthday<span class="required">*</span></label></td>
+                <td><input type="date" id="dateBirthday" name="birthday" required></td>
+            </tr>
+            <tr>
+                <td><label for="timeAppt">Appointment<span class="required">*</span></label></td>
+                <td><input type="time" id="timeAppt" name="appointment" required></td>
+            </tr>
+            --> 
+            <tr>
+                <td>&nbsp;</td>
+                <td style="text-align:right"><input type="submit" value="Posalji" id="btnSubmit">&nbsp;
+                    <input type="reset" value="Ocisti formu" id="btnReset"></td>
+            </tr>
+
+            <tr>
+
+                <td></td>
+
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>

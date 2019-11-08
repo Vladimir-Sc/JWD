@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery-3.4.1.js">
+</script>
+<script>
+$(document).ready(function(){
+    $("button#b_1").click(function(){
+        alert($("p#p_1").text());
+    }); 
+    $("button#b_2").click(function(){
+        alert($("p#p_1").html());
+    }); 
+    $("button#b_3").click(function(){
+        alert($("input#t_1").val());
+    }); 
+    $("button#b_4").click(function(){
+        alert($("input#t_1").attr("type"));
+    }); 
+    $("button#b_5").click(function(){
+        $("p#p_1").text("novi tekst");
+    }); 
+    $("button#b_6").click(function(){
+        $("p#p_1").html("<i>Novi html</i>");
+    }); 
+    $("button#b_7").click(function(){
+        $("input#t_1").val("nova vrednost");
+    }); 
+    $("button#b_8").click(function(){
+        $("input#t_1").attr("type","password");
+    }); 
+    $("button#b_9").click(function(){
+        $("p#p_1").text(function(){
+            return $("p#p_1").text()+$("input#t_1").val();      
+        });
+    }); 
+});
+</script>
+</head>
+
+<body>
+<h1 id="h1_1">Manipulacija DOM stablom</h1>
+<p id="p_1"><b>Prvi paragraf.</b></p>
+<input id="t_1" type="text" value="ime i prezime"/><br/>
+<button id="b_1">prikaži tekst</button>
+<button id="b_2">prikaži html</button>
+<button id="b_3">prikaži vrednost</button>
+<button id="b_4">prikaži atribut</button></br>
+<button id="b_5">izmeni tekst</button>
+<button id="b_6">izmeni html</button>
+<button id="b_7">izmeni vrednost</button>
+<button id="b_8">izmeni atribut</button></br>
+<button id="b_9">izmeni sa callback</button>
+</body>
+</html>

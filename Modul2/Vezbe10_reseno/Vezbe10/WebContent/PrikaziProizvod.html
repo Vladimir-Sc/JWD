@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Proizvod</title>
+	<style type="text/css">
+		input[type="text"] {
+			width: 150px
+		}
+		input[type="submit"] {
+			width: 75px
+		}
+		option {
+			width: 130px
+		}
+		td.labela {
+			width: 75px
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/PrikaziProizvod.js"></script>
+</head>
+<body>
+	<form name="izmena">
+		<table>
+			<caption>Proizvod</caption>
+			<tr><td class="labela">Naziv:</td><td><input type="text" name="naziv" value="naziv_proizvoda"/></td></tr>
+			<tr><td class="labela">Cena:</td><td><input type="text" name="cena" value="cena_proizvoda"/></td></tr>
+			<tr>
+				<td class="labela">Kategorija:</td>
+				<td>
+					<select name="kategorijaID">
+						<option value="id_kategorije_1">kategorija 1</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td class="labela"></td><td><input type="submit" value="Izmeni"/></td></tr>
+		</table>
+	</form>
+	<form name="brisanje">
+		<table>
+			<tr><td class="labela"></td><td><input type="submit" value="Obriši"/></td></tr>
+		</table>
+	</form>
+	<a href="SviProizvodi.html">Proizvodi</a>
+</body>
+</html>

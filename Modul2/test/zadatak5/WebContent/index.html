@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Učesnici</title>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <h2>Froma za upis učesnika</h2>
+
+    <form id="formTest" method="post" action="DodavanjeUcesnika">
+        <table>
+            <tr>
+                <td><label for="imeprezime">Ime i prezime:</label></td>
+                <td><input type="text" id="txtImeprezime" name="imeprezime"></td>
+                <td id="elmImeError" class="errorMsg">&nbsp;</td></tr>
+            </tr>
+
+            <tr>
+                <td><label for="kmpredjeni">Broj predjenih km:</label></td>
+                <td><input type="text" id="txtKmpredjeni" name="kmpredjeni" size="4"></td>
+                <td id="elmKmError" class="errorMsg">&nbsp;</td></tr>
+            </tr>
+
+            <tr>
+                <td><label for="vrememin">Vreme u minutima:</label></td>
+                <td><input type="text" id="txtVrememin" name="vrememin" size="4"></td>
+                <td id="elmVremeError" class="errorMsg">&nbsp;</td></tr>
+            </tr>
+
+            <tr>
+                <td>Zavrsio trku:</td>
+                <td><label><input type="checkbox" name="zavtrka" value="zavrseno"></label>
+                    <td id="elmZavrsioError" class="errorMsg">&nbsp;</td></tr>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tip ucesnika:</td>
+                <td><label><input type="radio" name="tipUcesnika" value="rekreativac">Rekreativac</label>
+                    <label><input type="radio" name="tipUcesnika" value="profesionalac">Profesionalac</label>
+                    <td id="elmTipUcesnikaError" class="errorMsg">&nbsp;</td></tr>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Napomena:</td>
+                <td><textarea name="napomena" rows="4" cols="50"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>Tip ucesca:</td>
+                <td><select id="selTip" name="tipUcesca">
+                        <option value="" selected>Izaberite tip...</option>
+                        <option value="trka zadovoljstva">trka zadovoljstva 5km</option>
+                        <option value="polumaraton">polumaraton</option>
+                        <option value="maraton">maraton</option>
+                        <option value="ultramaraton">ultramaraton</option>
+                    </select></td>
+                    <td id="elmTipUcescaError" class="errorMsg">&nbsp;</td></tr>
+            </tr>
+
+			<tr>
+                <td>&nbsp;</td>
+                <td style="text-align:right"><input type="submit" value="Posalji" id="btnSubmit">&nbsp;
+                    <input type="reset" value="Ocisti formu" id="btnReset"></td>
+            </tr>
+
+            <tr>
+
+                <td></td>
+
+            </tr>
+
+        </table>
+    </form>
+    
+    <br>
+    <p>
+    <a href="Registracija.html">Registracija</a>
+    <br>
+    <a href="prijava.html">Prijava</a>
+    <br>
+    </p>
+    <a href="PrikazUcesnika">Prikaz ucesnika</a>
+    <br>
+    <a href="FormaZaPretragu.html">Pretraga</a>
+    
+    <br>
+    <p>
+    <a href="Odjava">Odjava</a>
+    <a href="zadatakajax.html">Prikaz sa Ajaxom</a>
+    </p>
+</body>
+
+</html>

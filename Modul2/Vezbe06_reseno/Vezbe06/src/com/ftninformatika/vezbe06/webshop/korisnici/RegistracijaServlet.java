@@ -23,7 +23,11 @@ public class RegistracijaServlet extends HttpServlet {
 		String korisnickoIme = request.getParameter("korisnickoIme");
 		String lozinka = request.getParameter("lozinka");
 		String ponovljenaLozinka = request.getParameter("ponovljenaLozinka");
-
+		System.out.println("neki broj je:" + getServletContext().getAttribute("brojUcesnika"));
+		int brojUcesnika = (int) getServletContext().getAttribute("brojUcesnika");
+		brojUcesnika++;
+		getServletContext().setAttribute("brojUcesnika", brojUcesnika);
+		
 		try {
 			// provere
 			if (!korisnickoIme.matches("^[a-zA-Z0-9]+$")) {
@@ -51,7 +55,9 @@ public class RegistracijaServlet extends HttpServlet {
 			response.sendRedirect("SviKorisniciServlet");
 		} catch (Exception ex) {
 			ex.printStackTrace();
-		}		
+		}	
+		
+		System.out.println("Broj korisnika je:" + brojUcesnika);
 	}
 
 }

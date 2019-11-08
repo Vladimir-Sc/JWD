@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Korpa</title>
+	<style type="text/css">
+		input[type="submit"] {
+			width: 75px
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/PrikaziKorpu.js"></script>
+</head>
+<body>
+	<table border="1">
+		<caption>Korpa</caption>
+		<tr>
+			<th>Naziv</th>
+			<th>Cena</th>
+			<th>Kategorija</th>
+			<th>Komada</th>
+			<th>Ukupna cena</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td><a href="PrikaziProizvod.html?id=">naziv proizvoda</a></td>
+			<td>00.00</td>
+			<td><a href="PrikaziKategoriju.html?id=">kategorija proizvoda</a></td>
+			<td>1</td>
+			<td>00.00</td>
+			<td><form><input type="submit" value="Ukloni"/></form>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"></td>
+			<td id="cena">00.00</td>
+			<td>
+				<form name="praznjenje">
+					<input type="submit" value="Isprazni"/>
+				</form>
+			</td>
+		</tr>
+	</table>
+	<br/>
+	<a href="SviProizvodi.html">Proizvodi</a><br/>
+</body>
+</html>

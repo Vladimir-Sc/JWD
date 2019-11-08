@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Registracija</title>
+	<style type="text/css">
+		input[type="text"][type="password"] {
+			width: 150px
+		}
+		input[type="submit"] {
+			width: 100px
+		}
+		td.upozorenje {
+			color: red
+		}
+	</style>
+	<script type="text/javascript" src="js/Registracija.js"></script>
+</head>
+<body>
+	<form method="post" action="RegistracijaServlet" name="registracija">
+		<table>
+			<caption>Registracija</caption>
+			<tr><td>Korisničko ime:</td><td><input type="text" name="korisnickoIme" onfocus="ulazakUPolje(this)" onfocusout="izlazakIzPolja(this)"/></td><td class="upozorenje">*</td></tr>
+			<tr><td>Lozinka:</td><td><input type="password" name="lozinka" onfocus="ulazakUPolje(this)" onfocusout="izlazakIzPolja(this)"/></td><td class="upozorenje">*</td></tr>
+			<tr><td>Ponovljena lozinka:</td><td><input type="password" name="ponovljenaLozinka" onfocus="ulazakUPolje(this)" onfocusout="izlazakIzPolja(this)"/></td><td class="upozorenje">*</td></tr>
+			<tr><td></td><td><input type="submit" value="Registracija" onclick="return validacija()"/></td></tr>
+		</table>
+	</form>
+	<a href="SviKorisniciServlet">Korisnici</a>
+</body>
+</html>

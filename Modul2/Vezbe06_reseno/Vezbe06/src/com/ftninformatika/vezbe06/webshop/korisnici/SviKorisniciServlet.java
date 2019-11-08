@@ -16,10 +16,13 @@ import com.ftninformatika.vezbe06.webshop.model.Korisnik;
 public class SviKorisniciServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		int[] intArray2 = (int[])(getServletContext().getAttribute("lista"));
+		
 		try {
-			// čitanje svih korisnika iz baze
+			// Ä�itanje svih korisnika iz baze
 			List<Korisnik> korisnici = KorisnikDAO.getAll();
-			
+
 			// prikaz svih korisnika (HTML ljustura se nalazi u SviKorisnici.html)
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
@@ -33,7 +36,7 @@ public class SviKorisniciServlet extends HttpServlet {
 					"<body>\r\n" + 
 					"	<table border=\"1\">\r\n" + 
 					"		<caption>Korisnici</caption>\r\n" + 
-					"		<tr><th>Korisničko ime</th></tr>\r\n"
+					"		<tr><th>KorisniÄ�ko ime</th></tr>\r\n"
 				);
 		for (Korisnik itKorisnik: korisnici) {
 			out.write(
@@ -44,13 +47,19 @@ public class SviKorisniciServlet extends HttpServlet {
 					"	</table>\r\n" + 
 					"	<a href=\"Registracija.html\">Registracija</a><br/>\r\n" + 
 					"	<br/>\r\n" + 
-					"	<a href=\"PocetnaServlet\">Početna strana</a><br/>\r\n" + 
+					"	<a href=\"PocetnaServlet\">PoÄ�etna strana</a><br/>\r\n" + 
 					"</body>\r\n" + 
 					"</html>"
 				);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+		
+		
+		for (int i=0; i<intArray2.length; i++) {
+    		
+    		System.out.println(intArray2[i]);
+    	}
 
 	}
 

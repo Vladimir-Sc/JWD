@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Proizvodi</title>
+	<style type="text/css">
+		input[type="text"] {
+			width: 20px
+		}
+		input[type="submit"] {
+			width: 75px
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/SviProizvodi.js"></script>
+</head>
+<body>
+	<table border="1">
+		<caption>Proizvodi</caption>
+		<tr>
+			<th>Naziv</th>
+			<th>Cena</th>
+			<th>Kategorija</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td><a href="PrikaziProizvod.html?id=">naziv proizvoda</a></td>
+			<td>00.00</td>
+			<td><a href="PrikaziKategoriju.html?id=">kategorija proizvoda</a></td>
+			<td>
+				<form>
+					<input type="hidden" name="proizvodID" value="id_proizvoda"/>
+					<input type="text" name="komada" value="1"/>
+					<input type="submit" value="U korpu"/>
+				</form>
+			</td>
+		</tr>
+	</table>
+	<a href="PrikaziDodavanjeProizvoda.html">Dodaj proizvod</a><br/>
+	<br/>
+	<a href="Pocetna.html">Početna strana</a><br/>
+</body>
+</html>
