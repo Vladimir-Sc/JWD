@@ -16,7 +16,9 @@
 		<java.version>1.7</java.version>
 		<tomcat.version>7.0.59</tomcat.version>
 	</properties>
+	
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -34,12 +36,15 @@
 		</dependency>
 
 	</dependencies>
+	
 	<build>
 		<plugins>
+		
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -47,6 +52,8 @@
 					<useSystemClassLoader>false</useSystemClassLoader>
 				</configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
+	
 </project>

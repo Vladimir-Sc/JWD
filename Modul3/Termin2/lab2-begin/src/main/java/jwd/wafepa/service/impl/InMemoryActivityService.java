@@ -8,8 +8,11 @@ import java.util.Map;
 import jwd.wafepa.model.Activity;
 import jwd.wafepa.service.ActivityService;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+
+@Service
 public class InMemoryActivityService implements ActivityService {
 
 	private Map<Long, Activity> activities = new HashMap<>();
