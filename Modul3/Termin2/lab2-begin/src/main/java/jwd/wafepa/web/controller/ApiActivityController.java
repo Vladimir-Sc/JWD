@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,15 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import jwd.wafepa.model.Activity;
 import jwd.wafepa.service.ActivityService;
-import jwd.wafepa.service.impl.InMemoryActivityService;
+// import jwd.wafepa.service.impl.InMemoryActivityService;
 
 @RestController
 @RequestMapping("/api/activities")
 public class ApiActivityController {
  
-	
-	private ActivityService activityService 
-			= new InMemoryActivityService();
+	@Autowired
+	private ActivityService activityService;
+			//= new InMemoryActivityService();
 	
 	@RequestMapping(method=RequestMethod.GET)				
 	public ResponseEntity <List<Activity>> getActivities (){
