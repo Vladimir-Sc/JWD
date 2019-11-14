@@ -1,5 +1,7 @@
 package jwd.wafepa.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Models a physical activity.
  * 
@@ -9,6 +11,8 @@ public class Activity {
 	
 	private Long id;
 	private String name;
+	//@JsonIgnore
+	private String adminComment = "some admin coment";
 	
 	
 
@@ -57,6 +61,15 @@ public class Activity {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	
+	public String getAdminComment() {
+		return adminComment;
+	}
+
+	public void setAdminComment(String adminComment) {
+		this.adminComment = adminComment;
 	}
 	
 	
