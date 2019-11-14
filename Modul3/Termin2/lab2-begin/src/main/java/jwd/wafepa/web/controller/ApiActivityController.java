@@ -79,7 +79,7 @@ public class ApiActivityController {
 		if (id != edited.getId()) {
 			
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-			
+			// radi za vrednosti od -128 do 127
 		}
 		
 		Activity persistedEdited = activityService.save(edited);
