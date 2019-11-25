@@ -1,0 +1,19 @@
+<div ng-controller="UsersCtrl">
+	<h1>Users</h1>
+	
+	<button ng-click="goToAdd()">Add</button>
+	
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last name</th>
+		</tr>
+		
+		<tr ng-repeat="u in users">
+			<td>{{u.firstname}}</td>
+			<td>{{u.lastname}}</td>
+			<td><button ng-click="goToEdit(a.id)">Edit</button></td>
+			<td><button ng-click="toDelete(a.id)">Delete</button></td>
+		</tr>
+	</table>
+</div>

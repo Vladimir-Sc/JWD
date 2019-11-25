@@ -3,6 +3,9 @@
 	<form>
 		<label for="name">Name</label>
 		<input id="name" ng-model="activity.name"/>
-		<button ng-click="doAdd()">Add</button>
+		<button ng-disabled = "!activity.name" ng-click="doAdd()">Add</button>
 	</form>
+	
+	<p>{{activity.name}}</p>
+	
 </div>

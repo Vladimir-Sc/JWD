@@ -29,8 +29,8 @@ public class JpaRecordService
 	}
 
 	@Override
-	public Record save(Record activity) {
-		return recordRepository.save(activity);
+	public Record save(Record record) {
+		return recordRepository.save(record);
 	}
 
 	@Override

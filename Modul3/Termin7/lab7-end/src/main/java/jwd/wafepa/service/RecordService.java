@@ -26,14 +26,14 @@ public interface RecordService {
 	 * @param record
 	 * @return Record state after persisting. 
 	 */
-	Record save(Record activity);
+	Record save(Record record);
 	
 	/**
 	 * Persist a list of records
 	 * @param record
 	 * @return
 	 */
-	List<Record> save(List<Record> activities);
+	List<Record> save(List<Record> records);
 	
 	/**
 	 * Deletes an record having specified ID.

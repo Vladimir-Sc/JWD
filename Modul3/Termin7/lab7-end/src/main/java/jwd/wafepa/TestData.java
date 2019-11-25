@@ -36,9 +36,9 @@ public class TestData {
 	@PostConstruct
 	public void init() {
 		
-//		activityService.save(new Activity("Swimming"));
-//		activityService.save(new Activity("Running"));
-//		activityService.save(new Activity("Climbing"));
+		activityService.save(new Activity("Swimming"));
+		activityService.save(new Activity("Running"));
+		activityService.save(new Activity("Climbing"));
 		
 		//test start za activity/user/record ---------------------------------
 		
