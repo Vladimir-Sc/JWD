@@ -24,6 +24,18 @@ public class Address {
 	@ManyToOne(fetch = FetchType.EAGER)
 	private User user;
 	
+	
+	public Address() {
+		super();
+	}
+	
+	public Address(String streat, String number, User user) {
+		super();
+		this.streat = streat;
+		this.number = number;
+		this.user = user;
+	}
+	
 	public Long getId() {
 		return id;
 	}

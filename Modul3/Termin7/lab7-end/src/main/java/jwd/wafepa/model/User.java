@@ -35,6 +35,37 @@ public class User {
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private List<Address> addresses = new ArrayList<>();
 	
+	@OneToMany (mappedBy = "user")
+			//, cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE} )
+	private  List<Record> records = new ArrayList<>();
+	
+	
+	public User() {
+		super();
+	}
+	
+	
+	
+	public User(String email, String password, String firstName, String lastName, List<Record> records) {
+		super();
+		this.email = email;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.records = records;
+	}
+
+
+
+	public User(String email, String password, String firstName, String lastName) {
+		super();
+		this.email = email;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
@@ -78,4 +109,21 @@ public class User {
 			address.setUser(this);
 		}
 	}
+	
+	public void addRecords(Record record){
+		this.records.add(record);
+		if(!this.equals(record.getUser())){
+			record.setUser(this);
+		}
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", records=" + records + "]";
+	}
+	
+	
 }

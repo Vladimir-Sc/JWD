@@ -71,13 +71,19 @@ public class ApiAddressController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 		
-		Address persisted = addressService.save(
-				toAddress.convert(newAddress));
+		Address persisted = toAddress.convert(newAddress);
+		//Address persisted = addressService.save(
+			//	toAddress.convert(newAddress));
+		
+		//System.out.println(user.getAddresses());
 		
 		user.addAddress(persisted);
 		
-		addressService.save(persisted);
+		//addressService.save(persisted);
 		userService.save(user);
+		
+//		System.out.println("ADRESA USPESNO SNIMLJENA");
+//		System.out.println(user.getAddresses());
 		
 		
 		return new ResponseEntity<>(

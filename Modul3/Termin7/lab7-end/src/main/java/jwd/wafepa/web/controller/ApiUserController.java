@@ -26,6 +26,7 @@ import jwd.wafepa.web.dto.UserRegistrationDTO;
 @Controller
 @RequestMapping(value="/api/users")
 public class ApiUserController {
+	
 	@Autowired
 	private UserService userService;
 	
