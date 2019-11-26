@@ -35,6 +35,19 @@ wafepaApp.controller("ActivitiesCtrl", function($scope, $http, $location){
 		$location.path("/activities/add");
 	}
 	
+	
+	$scope.doDelete = function (id){
+		var promise = $http.delete(url + "/" + id );
+		promise.then(
+				function (success){
+					getActivities();
+				},
+				function (error){
+					alert("Couldn't delete the activity");
+				}
+		)
+	}
+	
 });
 
 
@@ -101,14 +114,24 @@ wafepaApp.controller("AddActivityCtrl", function($scope, $http, $location){
 wafepaApp.controller("RecordsCtrl", function($scope, $http, $location){
 	
 	var url = "/api/records";
+	var urlActivities = "/api/activities";
+	var urlUsers = "/api/users";
+	
 	
 	$scope.records = [];
+	$scope.activities = [];
+	$scope.users = [];
+	
 	
 	$scope.newRecord = {};
 	$scope.newRecord.time = "";
 	$scope.newRecord.duration = "";
 	$scope.newRecord.intensity = "";
 	//TODO: dodati obeležja kojim se povezuje sa korisnikom i aktivnošću
+	$scope.newRecord.activityId = "";
+	$scope.newRecord.userId = "";
+	
+	
 	
 	
 	var getRecords = function(){
@@ -126,8 +149,34 @@ wafepaApp.controller("RecordsCtrl", function($scope, $http, $location){
 	getRecords();
 	
 	//TODO: Obezbediti prihvat korisnika i aktivnosti
+	var getActivities = function (){
+		var promise = $http.get(urlActivities);
+		promise.then(
+				function success (res){
+					$scope.activities = res.data
+				},
+				function error (res){
+					alert("Couldn't fetch the activity");
+				}
+		)
+	}
+	
+	getActivities();
 	
 	
+	var getUsers = function (){
+		var promise = $http.get(urlUsers);
+		promise.then(
+				function success (res){
+					$scope.users = res.data
+				},
+				function error (res){
+					alert("Couldn't fetch the user");
+				}
+		)
+	}
+	
+	getUsers();
 	
 	
 	$scope.doAdd = function(){
@@ -172,6 +221,7 @@ wafepaApp.controller("EditRecordCtrl", function($scope, $http, $routeParams, $lo
 		$http.get(activitiesUrl).then(
 			function success(res){
 				$scope.activities = res.data;
+				getUsers();
 			},
 			function error(){
 				alert("Couldn't fetch activities");
@@ -183,6 +233,7 @@ wafepaApp.controller("EditRecordCtrl", function($scope, $http, $routeParams, $lo
 		return $http.get(usersUrl).then(
 			function success(res){
 				$scope.users = res.data;
+				getRecord();
 			},
 			function error(){
 				alert("Couldn't fetch users.");
@@ -194,6 +245,7 @@ wafepaApp.controller("EditRecordCtrl", function($scope, $http, $routeParams, $lo
 		$http.get(recordUrl).then(
 			function success(res){
 				$scope.record = res.data;
+				
 			},
 			function error(){
 				alert("Couldn't fetch record.");
@@ -203,8 +255,8 @@ wafepaApp.controller("EditRecordCtrl", function($scope, $http, $routeParams, $lo
 	
 	//TODO: Obezbediti redosled izvrsavanja!
 	getActivities();
-	getUsers();
-	getRecord();
+	//getUsers();
+	//getRecord();
 	
 	
 	$scope.doEdit = function(){

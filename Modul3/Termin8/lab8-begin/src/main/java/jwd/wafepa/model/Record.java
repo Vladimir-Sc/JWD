@@ -14,7 +14,7 @@ public class Record {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(nullable=false)
+	@Column(nullable=false) 
 	private String time;
 	
 	@Column(nullable=false)

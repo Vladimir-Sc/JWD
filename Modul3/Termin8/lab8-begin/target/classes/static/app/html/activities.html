@@ -10,6 +10,11 @@
 		<tr ng-repeat="a in activities">
 			<td>{{a.name}}</td>
 			<td><button ng-click="goToEdit(a.id)">Edit</button></td>
+			<td>
+			<button ng-click="doDelete(a.id)">Delete</button>
+			</td>
+			
+			
 		</tr>
 	</table>
 </div>
