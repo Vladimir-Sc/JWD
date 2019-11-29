@@ -1,9 +1,7 @@
 <div ng-controller="RecordsCtrl">
 	<h1>Records</h1>
 	
-	<button ng-click="prikazForme()" type="button">Pritisni!</button>
-	
-	<form ng-show="prikaz">
+	<form>
 		<div class="form-group">
 			<label for="rtime">Time</label>
 			<input class="form-control" id="rtime" ng-model="newRecord.time" />
@@ -34,33 +32,28 @@
 		<button class="btn btn-primary" ng-click="doAdd()">Add</button>
 	</form>
 	
-	<h2>Pretraga</h2>
-	<!-- forma za pretragu -->
-	<form ng-hide="prikaz"> 
+	<form>
 		<div class="form-group">
 			<label for="sactivity">Activity name</label>
-			<input ng-model="sParams.activityName" id="sactivity" class="form-control" >
+			<input ng-model="sParams.activityName" id="sactivity" class="form-control">
 		</div>
-		
 		<div class="form-group">
 			<label for="sminduration">Min duration</label>
 			<input ng-model="sParams.minDuration" id="sminduration" class="form-control">
 		</div>
-		
 		<div class="form-group">
-			<label for="sintesity">Intesity</label>
-			<input ng-model="sParams.intensity" id="sintesity" class="form-control" >
+			<label for="sintensity">Intensity</label>
+			<input ng-model="sParams.intensity" id="sintensity" class="form-control">
 		</div>
 		<button ng-click="doSearch()" class="btn btn-primary">Search</button>
 	</form>
 	
-	<div class="btn-group flow-right">
-		<button ng-disabled="pageNum == 0" ng-click="changePage(-1)" class= "btn btn-info">Previous</button>
-		<button ng-disabled="pageNum == totalPages -1" ng-click="changePage(1)" class= "btn btn-info">Next</button>
+	
+	<div class="btn-group float-right">
+		<button ng-disabled="pageNum == 0" ng-click="changePage(-1)" class="btn btn-info">Previous</button>
+		<button ng-disabled="pageNum == totalPages - 1" ng-click="changePage(1)" class="btn btn-info">Next</button>
+		
 	</div>
-	
-	
-	
 	
 	<table class="table">
 		<thead class="thead-dark">

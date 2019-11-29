@@ -112,13 +112,6 @@ wafepaApp.controller("AddActivityCtrl", function($scope, $http, $location){
 
 wafepaApp.controller("RecordsCtrl", function($scope, $http, $location){
 	
-	$scope.prikaz=true;
-	
-	$scope.prikazForme = function (){
-		$scope.prikaz = !$scope.prikaz;
-		
-	}
-	
 	var url = "/api/records";
 	var urlActivities = "/api/activities";
 	var urlUsers = "/api/users";
@@ -139,7 +132,7 @@ wafepaApp.controller("RecordsCtrl", function($scope, $http, $location){
 	$scope.sParams.minDuration = "";
 	$scope.sParams.intensity = "";
 	
-	$scope.pageNum =0;
+	$scope.pageNum = 0;
 	$scope.totalPages = 1;
 	
 	//TODO: dodati obeležja kojim se povezuje sa korisnikom i aktivnošću
@@ -147,18 +140,19 @@ wafepaApp.controller("RecordsCtrl", function($scope, $http, $location){
 	
 	var getRecords = function(){
 		
-		var config = {params:{ }};
+		var config = {params:{}};
+		
 		if($scope.sParams.activityName != ""){
-				config.params.activityName = $scope.sParams.activityName;
+			config.params.activityName = $scope.sParams.activityName;
 		}
-			
+		
 		if($scope.sParams.minDuration != ""){
-					config.params.minDuration = $scope.sParams.minDuration;
-		}	
+			config.params.minDuration = $scope.sParams.minDuration;
+		}
 		
 		if($scope.sParams.intensity != ""){
 			config.params.intensity = $scope.sParams.intensity;
-		}	
+		}
 		
 		config.params.pageNum = $scope.pageNum;
 		
@@ -228,16 +222,14 @@ wafepaApp.controller("RecordsCtrl", function($scope, $http, $location){
 	}
 	
 	$scope.doSearch = function(){
-		//ako uradimo search vrati ga na prvu stranicu
 		$scope.pageNum = 0;
 		getRecords();
 	}
 	
-	$scope.changePage = function (direction){
+	$scope.changePage = function(direction){
 		$scope.pageNum += direction;
 		getRecords();
 	}
-	
 });
 
 
