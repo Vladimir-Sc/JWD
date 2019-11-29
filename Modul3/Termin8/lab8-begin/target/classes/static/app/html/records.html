@@ -15,6 +15,21 @@
 			<input class="form-control" id="rintensity" ng-model="newRecord.intensity"/>
 		</div>
 		
+		<div class="form-group">
+			<label for ="rusers">Users</label>
+			<select class="form-control" ng-model="newRecord.userId" id ="rusers">
+				<option ng-repeat= "u in users" value="{{u.id}}">{{u.firstname}}</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for ="ractivities">Activities</label>
+			<select class="form-control" ng-model="newRecord.activityId" id ="ractivities">
+				<option ng-repeat= "a in activities" value ="{{a.id}}">{{a.name}}</option>
+			</select>
+		</div>
+		
+		
 		<!-- TODO: Omogućiti odabir korisnika i aktivnosti -->
 		
 		<button class="btn btn-primary" ng-click="doAdd()">Add</button>
@@ -33,7 +48,13 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
+			<tr ng-repeat ="r in records">
+				<td>{{r.time}}</td>
+				<td>{{r.duration}}</td>
+				<td>{{r.intensity}}</td>
+				<td>{{r.activityName}}</td>
+				<td>{{r.userName}}</td>
+				<td><button class="btn btn-primary" ng-click="goToEdit(r.id)">Edit</button></td>
 				<!-- TODO: Prikazati obeležja, kako beleške tako i entiteta za koje je vezana + dugme -->
 				
 			</tr>

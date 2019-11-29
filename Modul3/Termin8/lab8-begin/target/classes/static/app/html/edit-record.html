@@ -17,6 +17,24 @@
 		
 		<!-- Omogućiti promenu prikazanih, vezanih korisnika i aktivnosti -->
 		
+		
+		<div>
+			<label>User</label>
+			<select ng-model="record.userId">
+				<option ng-repeat="u in users" value="{{u.id}}"
+				ng-selected="u.id == record.userId">{{u.firstname}}</option>
+			</select>
+		</div>
+		
+		<div>
+			<label>Activity</label>
+			<select ng-model="record.activityId">
+				<option ng-repeat="a in activities" value="{{a.id}}"
+				ng-selected="a.id == record.activityId">{{a.name}}</option>
+			</select>
+		</div>
+		
+		
 		<button class="btn btn-secondary" ng-click="doEdit()">Edit</button>
 	</form>
 
