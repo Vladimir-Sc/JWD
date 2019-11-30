@@ -32,43 +32,85 @@ AuStanApp.controller("LinijeCtrl", function($scope, $http, $routeParams, $locati
 	
 	
 	
-	var getLinija = function(id){
-		
-		var url = "/api/linije" + id;
-		var promise = $http.get(url);
-		promise.then(
-			function uspeh(odg){
-				$scope.linija = odg.data;
-			},
-			function neuspeh(odg){
-				alert("Couldn't fetch the activity.");
-			}
-		);
-	}
-	
-	
-	
-	
-	
-	$scope.doRezervacija = function(id){
-		
-		var url = "/api/linije/" + id;
-		
-		getLinija(id);
-		
-		var promise = $http.get(url);
+	var doEditLin = function(url, linija){
+		var promise = $http.put(url, linija);
 		promise.then(
 			function success(res){
-				$location.path("/activities");
+				console.log(res);
+				//$location.path("/linije");
 			},
 			function error(){
 				alert("Couldn't save the activity");
 			}
 		);
 	}
+	
+	
+	$scope.getLinija = function(id){
 		
-		
+		var url = "/api/linije/" + id;
+		var promise = $http.get(url);
+		promise.then(
+			function uspeh(odg){
+				$scope.linija = odg.data;
+				alert(odg.data.brojMesta);
+			},
+			function neuspeh(odg){
+				alert("Couldn't fetch the activity blablabla.");
+			}
+		);
 	}
+	
+	
+	
+
+	$scope.doRez = function(id){
+		
+		var url = "/api/linije/" + id;
+		var promise = $http.get(url);
+		promise.then(
+			function uspeh(odg){
+				$scope.linija = odg.data;
+				doEditLin(url, $scope.linija);
+				getLinije();
+				$location.path("/linije");
+			},
+			function neuspeh(odg){
+				alert("Couldn't fetch the activity.");
+			}
+		);
+}
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+//	$scope.doRezervacija = function(id){
+//		
+//		var url = "/api/linije/" + id;
+//		
+//		getLinija(id);
+//		
+//		var promise = $http.get(url);
+//		promise.then(
+//			function success(res){
+//				$location.path("/activities");
+//			},
+//			function error(){
+//				alert("Couldn't save the activity");
+//			}
+//		);
+//	}
+		
+		
+	
 	
 //	$scope.goToEdit = function(id){
 //		$location.path("/activities/edit/" + id);

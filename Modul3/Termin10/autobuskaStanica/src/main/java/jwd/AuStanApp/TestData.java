@@ -39,16 +39,20 @@ public class TestData {
 		Linija l1 = new Linija(50, 320.25, "14:15", "Savac", p1);
 		linijaService.save(l1);
 		
-		Rezervacija r1 = new Rezervacija(l1);
-		Rezervacija r2 = new Rezervacija(l1);
-		//r1.setLinija(l1);
+	//	Rezervacija r1 = new Rezervacija(l1);
+	//	Rezervacija r2 = new Rezervacija(l1);
+	//	r1.setLinija(l1);
 		
-		rezervacijaService.save(r1);
-		rezervacijaService.save(r2);
+	//	rezervacijaService.save(r1);
+	//	rezervacijaService.save(r2);
 		
-		//linijaService.save(l1);
+	//	linijaService.save(l1);
 		
 		
 	}
 
 }
+
+
+// Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. 
+// The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.

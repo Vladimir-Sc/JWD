@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,6 +34,16 @@ public class ApiLinijeController {
 		linije = linijaService.findAll();
 
 		return new ResponseEntity<>(toDTO.convert(linije), HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	ResponseEntity<LinijaDTO> getLinija(@PathVariable Long id) {
+		Linija linija = linijaService.findOne(id);
+		if (linija == null) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+
+		return new ResponseEntity<>(toDTO.convert(linija), HttpStatus.OK);
 	}
 
 }
