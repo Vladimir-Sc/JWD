@@ -5,11 +5,14 @@ AuStanApp.controller("HomeCtrl", function($scope){
 });
 
 
-AuStanApp.controller("LinijeCtrl", function($scope, $http, $location){
+AuStanApp.controller("LinijeCtrl", function($scope, $http, $routeParams, $location){
+	
+	var url = "/api/linije";
 	
 	var url = "/api/linije";
 	
 	$scope.linije = [];
+	$scope.linija = {};
 	
 	var getLinije = function(){
 		var promise = $http.get(url);
@@ -26,6 +29,46 @@ AuStanApp.controller("LinijeCtrl", function($scope, $http, $location){
 	}
 	
 	getLinije();
+	
+	
+	
+	var getLinija = function(id){
+		
+		var url = "/api/linije" + id;
+		var promise = $http.get(url);
+		promise.then(
+			function uspeh(odg){
+				$scope.linija = odg.data;
+			},
+			function neuspeh(odg){
+				alert("Couldn't fetch the activity.");
+			}
+		);
+	}
+	
+	
+	
+	
+	
+	$scope.doRezervacija = function(id){
+		
+		var url = "/api/linije/" + id;
+		
+		getLinija(id);
+		
+		var promise = $http.get(url);
+		promise.then(
+			function success(res){
+				$location.path("/activities");
+			},
+			function error(){
+				alert("Couldn't save the activity");
+			}
+		);
+	}
+		
+		
+	}
 	
 //	$scope.goToEdit = function(id){
 //		$location.path("/activities/edit/" + id);
