@@ -36,7 +36,8 @@ AuStanApp.controller("LinijeCtrl", function($scope, $http, $routeParams, $locati
 		var promise = $http.put(url, linija);
 		promise.then(
 			function success(res){
-				console.log(res);
+				getLinije();
+				console.log(res.data);
 				//$location.path("/linije");
 			},
 			function error(){
@@ -53,6 +54,7 @@ AuStanApp.controller("LinijeCtrl", function($scope, $http, $routeParams, $locati
 		promise.then(
 			function uspeh(odg){
 				$scope.linija = odg.data;
+				console.log($scope.linija);
 				alert(odg.data.brojMesta);
 			},
 			function neuspeh(odg){
@@ -72,7 +74,7 @@ AuStanApp.controller("LinijeCtrl", function($scope, $http, $routeParams, $locati
 			function uspeh(odg){
 				$scope.linija = odg.data;
 				doEditLin(url, $scope.linija);
-				getLinije();
+				//getLinije();
 				$location.path("/linije");
 			},
 			function neuspeh(odg){
